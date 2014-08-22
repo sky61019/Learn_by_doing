@@ -1,4 +1,4 @@
 Learn-by-doing
 ==============
 
-Fist Github Repository
+Fist GitHub Repository
