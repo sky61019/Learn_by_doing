@@ -14,15 +14,17 @@ Git Learning
 # Github 远程仓库
 ## Github远程仓库创建
 
-1. 创建SSH Key用于本地Git仓库和Github仓库之间的传输。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：
+1.	**创建SSH Key**用于本地Git仓库和Github仓库之间的传输。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：
 
-'$ ssh-keygen -t rsa -C "youremail@example.com"'
+	> $ ssh-keygen -t rsa -C "youremail@example.com" 
 
-你需要把邮件地址换成你自己的邮件地址，然后一路回车，使用默认值即可，由于这个Key也不是用于军事目的，所以也无需设置密码。
+	你需要把邮件地址换成你自己的邮件地址，然后一路回车，使用默认值即可，由于这个Key也不是用于军事目的，所以也无需设置密码。如果一切顺利的话，可以在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。
 
-如果一切顺利的话，可以在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。
+2.    **设置username和email**，因为github每次commit都会记录他们。
+>  $ git config --global user.name "your name"
+   $ git config --global user.email "your_email@youremail.com"
 
-2. 设置username和email，因为github每次commit都会记录他们。
-'$ git config --global user.name "your name"
- $ git config --global user.email "your_email@youremail.com"'
+3.    **克隆仓库**或将现有的本地仓库与Github上的仓库进行**关联**
+> $ git clone https://github.com/*your name*/*example*.git
+  或 $ git remote add origin https://github.com/*your name*/*example*.git
 
