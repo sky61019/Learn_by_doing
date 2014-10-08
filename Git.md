@@ -25,6 +25,6 @@ Git Learning
    $ git config --global user.email "your_email@youremail.com"
 
 3.    **克隆仓库**或将现有的本地仓库与Github上的仓库进行**关联**
-> $ git clone https://github.com/*your name*/*example*.git
-  或 $ git remote add origin https://github.com/*your name*/*example*.git
+> $ git clone https://github.com/your name/example.git
+  或 $ git remote add origin https://github.com/your name/example.git
 
